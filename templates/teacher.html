@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}添加教师信息{% endblock %}
+{% block body %}
+<form method="post" action="/teacher">
+  {% if complaint %}<span class="complaint">{{ complaint }}</span>{% endif %}
+  <label>教师号: <input name="teacher_id" value="{{ teacher_id }}"></label>
+  <label>教师姓名: <input name="teacher_name" value="{{ teacher_name }}"></label>
+  <label>教师性别: <input name="teacher_sex" value="{{ teacher_sex }}"></label>
+  <label>教师职称: <input name="teacher_title" value="{{ teacher_title }}"></label>
+  <button type="submit">提交</button> | <a href="/">取消</a>
+</form>
+{% endblock %}

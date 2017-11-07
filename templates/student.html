@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}添加学生信息{% endblock %}
+{% block body %}
+<form method="post" action="/student">
+  {% if complaint %}<span class="complaint">{{ complaint }}</span>{% endif %}
+  <label>学号: <input name="student_id" value="{{ student_id }}"></label>
+  <label>学生姓名: <input name="student_name" value="{{ student_name }}"></label>
+  <button type="submit">提交</button> | <a href="/">取消</a>
+</form>
+{% endblock %}

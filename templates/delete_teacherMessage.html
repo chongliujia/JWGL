@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}删除教师信息{% endblock %}
+{% block body %}
+<center><form method="post" action="/delete_studentMessage">
+  {% if complaint %}<span class="complaint">{{ complaint }}</span>{% endif %}
+  <label>教师号: <input name="teacher_id" value="{{ teacher_id }}"></label>
+  <label>教师姓名: <input name="teacher_name" value="{{ teacher_name }}"></label>
+
+  <button type="submit">删除</button> | <button a href="/123">取消</a>
+</form></center>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}添加课程信息{% endblock %}
+{% block body %}
+<form method="post" action="/course">
+  {% if complaint %}<span class="complaint">{{ complaint }}</span>{% endif %}
+  <label>课程号: <input name="course_id" value="{{ course_id }}"></label>
+  <label>课程名: <input name="course_name" value="{{ course_name }}"></label>
+  <label>授课老师: <input name="course_teacher" value="{{ course_teacher }}"></label>
+  <label>课程备注: <input name="course_title" value="{{ course_title }}"></label>
+  <button type="submit">提交</button> | <a href="/">取消</a>
+</form>
+{% endblock %}

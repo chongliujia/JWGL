@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}删除课程信息{% endblock %}
+{% block body %}
+<center><form method="post" action="/delete_studentMessage">
+  {% if complaint %}<span class="complaint">{{ complaint }}</span>{% endif %}
+  <label>课程号: <input name="course_id" value="{{ course_id }}"></label>
+  <button type="submit">删除</button> | <button a href="/123">取消</a>
+</form></center>
+{% endblock %}
