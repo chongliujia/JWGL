@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 
-import login
+
 import os
 import sqlite3
 
